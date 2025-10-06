@@ -10,7 +10,7 @@ def scrape_news_from_feed(feed_url):
     for entry in feed.entries:
         # create a newspaper article object
         article = newspaper.Article(entry.link)
-        # download and parse the article
+        # download and parse the article``
         article.download()
         article.parse()
         # extract relevant information
