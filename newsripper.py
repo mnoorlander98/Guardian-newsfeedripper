@@ -26,11 +26,11 @@ def scrape_news_from_feed(feed_url):
 feed_url='https://www.theguardian.com/uk/rss'
 articles = scrape_news_from_feed(feed_url)
 
-
+df=pd.DataFrame(articles)
+print(df)
 #print extracted articles
-for article in articles:
-    print('Title:', article['title'])
-    print('Author:', article['author'])
-    print('Publish Date:', article['publish_date'])
-    print('Content:', article['content'])
-    print()
+#for article in articles:
+#    ('Title:', article['title'])
+#    ('Author:', article['author'])
+#    ('Publish Date:', article['publish_date'])
+#    ('Content:', article['content'])
