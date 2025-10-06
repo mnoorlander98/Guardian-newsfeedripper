@@ -2,7 +2,7 @@
 
 import newspaper
 import feedparser
-
+import pandas as pd
 
 def scrape_news_from_feed(feed_url):
     articles= []
@@ -10,7 +10,7 @@ def scrape_news_from_feed(feed_url):
     for entry in feed.entries:
         # create a newspaper article object
         article = newspaper.Article(entry.link)
-        # download and parse the article``
+        # download and parse the article
         article.download()
         article.parse()
         # extract relevant information
@@ -25,6 +25,7 @@ def scrape_news_from_feed(feed_url):
 
 feed_url='https://www.theguardian.com/uk/rss'
 articles = scrape_news_from_feed(feed_url)
+
 
 #print extracted articles
 for article in articles:
